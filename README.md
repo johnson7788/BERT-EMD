@@ -1,8 +1,8 @@
 # BERT-EMD
-This repository contains an implementation with PyTorch of model presented in the paper "BERT-EMD: Many-to-Many Layer Mapping for BERT Compression with Earth Mover's Distance" in EMNLP 2020.
-The figure below illustrates a high-level view of the model's architecture.
+该repository包含EMNLP 2020中论文“BERT-EMD: Many-to-Many Layer Mapping for BERT Compression with Earth Mover's Distance”中提出的模型的PyTorch实现。
+下图说明了模型体系结构的高阶视图。
 ![BERT-EMD Model](BERT-EMD-model.png "BERT-EMD")
-For more details about the techniques of BERT-EMD, refer to our paper:[update soon]
+有关BERT-EMD技术的更多详细信息，请参阅我们的论文 :https://arxiv.org/pdf/2010.06133.pdf
 
 ### Installation
 
@@ -26,7 +26,7 @@ python convert_bert_original_tf_checkpoint_to_pytorch.py \
 --bert_config_file ../model/bert_base_uncased/bert_config.json \
 --pytorch_dump_path ../model/pytorch_bert_base_uncased
 ``` 
-Or you can download the pytorch version directly from [huggingface](https://huggingface.co/bert-base-uncased#).
+或者您可以直接从以下位置下载pytorch版本 [huggingface](https://huggingface.co/bert-base-uncased#).
 
 3. Get finetune teacher model, take task QQP for example:
 ```
@@ -50,7 +50,7 @@ python run_glue.py \
   --evaluate_during_training \
   --overwrite_output_dir
 ```
-4. Get the pretrained general distillation TinyBERT student model: [4-layer](https://drive.google.com/open?id=1PhI73thKoLU2iliasJmlQXBav3v33-8z) and [6-layer](https://drive.google.com/open?id=1r2bmEsQe4jUBrzJknnNaBJQDgiRKmQjF).
+4. 获取预训练的常规蒸馏TinyBERT student模型: [4-layer](https://drive.google.com/open?id=1PhI73thKoLU2iliasJmlQXBav3v33-8z) and [6-layer](https://drive.google.com/open?id=1r2bmEsQe4jUBrzJknnNaBJQDgiRKmQjF).
 Unzip to directory  `model/student/layer4` and  `model/student/layer6` respectively.
 5. Distill student model, take 4-layer student model for example:
 ```

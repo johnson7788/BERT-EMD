@@ -33,9 +33,9 @@ import torch
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler, TensorDataset)
 from tqdm import tqdm, trange
 from torch.nn import CrossEntropyLoss, MSELoss
-from bert_fineturn.data_processor.glue import glue_compute_metrics as compute_metrics
-from bert_fineturn.data_processor.glue import glue_output_modes as output_modes
-from bert_fineturn.data_processor.glue import glue_processors as processors
+from bert_finetune.data_processor.glue import glue_compute_metrics as compute_metrics
+from bert_finetune.data_processor.glue import glue_output_modes as output_modes
+from bert_finetune.data_processor.glue import glue_processors as processors
 from tinybert.modeling import TinyBertForSequenceClassification, BertConfig, TinyBertForPreTraining
 from tinybert.tokenization import BertTokenizer
 from tinybert.optimization import BertAdam
