@@ -6,9 +6,9 @@
 
 ### Installation
 
-Run command below to install the environment (using python3).
 
-```
+```安装python3.6环境 (using python3.6),最高支持到python3.6
+
 pip install -r requirements.txt 
 ```
 
@@ -28,7 +28,7 @@ python convert_bert_original_tf_checkpoint_to_pytorch.py \
 ``` 
 或者您可以直接从以下位置下载pytorch版本 [huggingface](https://huggingface.co/bert-base-uncased#).
 
-3. Get finetune teacher model, take task QQP for example:
+3. 微调teacher模型, 用QQP任务为示例:
 ```
 
 export MODEL_PATH=../model/pytorch_bert_base_uncased/
